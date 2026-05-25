@@ -1,0 +1,28 @@
+.custom-btn {
+  padding: 14px 34px;
+  border: 2px solid var(--text-dark);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.custom-btn:hover {
+  background: var(--text-dark);
+  color: var(--white);
+}
+
+.custom-btn span {
+  transition: transform 0.3s ease;
+}
+
+.custom-btn:hover span {
+  transform: translateX(4px);
+}

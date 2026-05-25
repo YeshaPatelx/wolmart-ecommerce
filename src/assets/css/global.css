@@ -1,0 +1,36 @@
+.section-title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+.section-title-wrapper .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0;
+}
+
+.section-title-wrapper .more-btn{
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    color: var(--text-dark);
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+
+
+.section-title-wrapper .more-btn:hover{
+    color: var(--primary-color);
+}

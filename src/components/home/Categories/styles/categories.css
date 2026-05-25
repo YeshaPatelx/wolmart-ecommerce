@@ -1,0 +1,91 @@
+/* categories.css */
+
+.categories-section {
+    padding-bottom: 50px;
+}
+
+.categories-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.category-banner {
+    min-height: 200px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+
+.category-content {
+    max-width: 320px;
+}
+
+.category-subtitle {
+    display: block;
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.category-subtitle span {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.category-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.category-collection {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.category-price {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Light Banner */
+
+
+.light-banner .category-title .category-price{
+    color: var(--text-light);
+    font-size: 14px;
+}
+.category-price span {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+/* Dark Banner */
+
+.dark-banner .category-subtitle,
+.dark-banner .category-collection {
+    color: var(--white);
+}
+
+.dark-banner .category-title {
+    color: var(--white);
+}
+
+.dark-banner .category-price {
+    color: var(--white);
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .categories-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

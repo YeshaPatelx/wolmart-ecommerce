@@ -1,0 +1,88 @@
+/* recentViews.css */
+
+.rv-section {
+  padding-bottom: 50px;
+}
+
+
+
+/* CARD */
+
+.rv-card {
+  position: relative;
+}
+
+.rv-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.rv-img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.rv-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+
+  padding: 4px;
+  text-align: center;
+}
+
+.rv-card:hover .rv-overlay {
+  opacity: 1;
+}
+
+.rv-card:hover .rv-img {
+  transform: scale(1.05);
+}
+
+.rv-product-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.rv-product-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* SWIPER */
+
+
+
+
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 768px) {
+
+
+
+  .rv-section .swiper-button-next,
+  .rv-section .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .rv-section {
+    padding-bottom: 40px;
+  }
+
+}

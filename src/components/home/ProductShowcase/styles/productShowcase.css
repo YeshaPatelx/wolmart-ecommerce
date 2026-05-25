@@ -1,0 +1,423 @@
+/* productShowcase.css */
+
+.ps-section {
+    padding-bottom: 50px;
+}
+
+
+
+/* =========================
+   BANNER LAYOUT
+========================= */
+
+.ps-banner {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.ps-banner .left {
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.ps-banner .right {
+    width: 75%;
+}
+
+/* =========================
+   LEFT BANNER IMAGE
+========================= */
+
+.ps-banner .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   BANNER CONTENT
+========================= */
+
+.ps-banner-content {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ps-banner-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.ps-banner-title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.ps-banner-title span {
+    font-weight: 400;
+}
+
+/* =========================
+   WHITE CONTENT
+========================= */
+
+.ps-banner-content.white .ps-banner-subtitle,
+.ps-banner-content.white .ps-banner-title {
+    color: var(--white);
+}
+
+.ps-banner-content.white .custom-btn {
+    color: var(--white);
+    ;
+}
+
+.ps-banner-content.white .custom-btn::after {
+    background: var(--white);
+}
+
+/* =========================
+   BLACK CONTENT
+========================= */
+
+.ps-banner-content.black .ps-banner-subtitle,
+.ps-banner-content.black .ps-banner-title {
+    color: var(--black);
+}
+
+.ps-banner-content.black .custom-btn {
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.ps-banner-content.black .custom-btn::after {
+    background: var(--black);
+}
+
+/* =========================
+   BANNER BUTTON
+========================= */
+
+.ps-banner-btn {
+    width: fit-content;
+    border: none;
+    background: transparent;
+    padding: 0;
+    
+}
+
+.ps-banner-btn .custom-btn {
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+.ps-banner-btn .custom-btn:hover {
+    background: transparent;
+}
+
+.ps-banner-btn .custom-btn::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.ps-banner-btn .custom-btn:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.ps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.ps-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ps-card:hover .ps-img {
+    transform: scale(1.08);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.ps-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+}
+
+.ps-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+/* =========================
+   DISCOUNT
+========================= */
+
+.ps-discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: var(--orange);
+    color: var(--white);
+
+    padding: 4px 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+/* =========================
+   ICONS
+========================= */
+
+.ps-icons {
+    position: absolute;
+    top: 15px;
+    right: -60px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.ps-card:hover .ps-icons {
+    right: 15px;
+}
+
+.ps-icon-btn {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: var(--white);
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps-icon-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.ps-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.ps-product-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ps-product-title:hover {
+    color: var(--primary-color);
+}
+
+/* =========================
+   RATING
+========================= */
+
+.ps-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ps-stars {
+    display: flex;
+    gap: 3px;
+}
+
+.ps-star {
+    color: var(--orange);
+    font-size: 12px;
+}
+
+.ps-star-gray {
+    color: var(--text-muted);
+}
+
+.ps-reviews {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.ps-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ps-new-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.ps-old-price {
+    font-size: 14px;
+    color: var(--text-light);
+    text-decoration: line-through;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .ps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ps-banner .left {
+        width: 30%;
+    }
+
+    .ps-banner .right {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .ps-banner {
+        flex-direction: column;
+    }
+
+    .ps-banner .left,
+    .ps-banner .right {
+        width: 100%;
+    }
+
+    .ps-banner .left {
+        height: 400px;
+    }
+
+    .ps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+  
+
+   
+    .ps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .ps-banner-title {
+        font-size: 28px;
+    }
+
+    .ps-banner-content {
+        top: 30px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .ps-section {
+        padding-bottom: 40px;
+    }
+
+    .ps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ps-banner .left {
+        height: 300px;
+    }
+
+    .ps-banner-title {
+        font-size: 24px;
+    }
+
+    .ps-img-wrap {
+        height: auto;
+    }
+}

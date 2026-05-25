@@ -1,0 +1,121 @@
+/* promoBanner.css */
+
+.promo-section {
+  padding-bottom: 50px;
+}
+
+.promo-banner {
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 40px 50px;
+  position: relative;
+}
+
+.promo-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.promo-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LEFT */
+
+.promo-left {
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  border-right: 1px solid var(--border-color);
+}
+
+.promo-discount {
+  color: var(--orange);
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.promo-discount span {
+  font-size: 30px;
+}
+
+/* CENTER */
+
+.promo-center {
+  flex: 1;
+}
+
+.promo-title {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.promo-description {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.promo-code {
+  background: var(--white);
+  color: var(--black);
+  padding: 2px 8px;
+  margin: 0 8px;
+  font-weight: 700;
+}
+
+.promo-btn .custom-btn{
+  color: var(--white);
+  border: 1px solid var(--border-color);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .promo-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .promo-left {
+    border-right: none;
+    padding-right: 0;
+  }
+
+ 
+}
+
+@media (max-width: 768px) {
+
+  .promo-banner {
+    padding: 30px 25px;
+  }
+
+  .promo-discount {
+    font-size: 55px;
+  }
+
+  .promo-title {
+    font-size: 28px;
+  }
+
+  .promo-description {
+    font-size: 16px;
+  }
+}
+

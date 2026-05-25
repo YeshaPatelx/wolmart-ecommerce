@@ -1,0 +1,156 @@
+/* BLOG */
+
+.blog-section {
+    padding-bottom: 50px;
+}
+
+
+
+/* GRID */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* IMAGE */
+
+.blog-img-wrap {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.blog-img {
+    width: 100%;
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+.blog-card:hover .blog-img {
+    transform: scale(1.08);
+}
+
+/* CONTENT */
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+/* META */
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 14px;
+}
+
+.blog-by {
+    color: var(--text-light);
+}
+
+.blog-author {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.blog-date {
+    color: var(--text-light);
+}
+
+/* TITLE */
+
+.blog-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: var(--text-dark);
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.blog-title:hover {
+    color: var(--primary-color);
+}
+
+/* BUTTON */
+
+.blog-btn {
+    width: fit-content;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.blog-btn .custom-btn {
+    padding: 0;
+    border: none;
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.blog-btn-icon {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.blog-btn:hover .blog-btn-icon {
+    transform: translateX(4px);
+}
+
+.blog-btn:hover .custom-btn {
+    color: var(--primary-color);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+
+ 
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}

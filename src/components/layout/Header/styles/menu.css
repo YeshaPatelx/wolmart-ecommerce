@@ -1,0 +1,435 @@
+/* ===================================================
+   NAVIGATION DROPDOWN SYSTEM
+=================================================== */
+
+.dropdown-wrapper {
+    position: relative;
+}
+
+/* ===================================================
+   COMMON NAV DROPDOWN
+=================================================== */
+
+.nav-dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: var(--white);
+    padding: 24px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* SHOW DROPDOWN */
+
+.dropdown-wrapper:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===================================================
+   COMMON UL STYLE
+=================================================== */
+
+.nav-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===================================================
+   COMMON LI STYLE
+=================================================== */
+
+.nav-dropdown li {
+    font-size: 14px;
+    color: var(--text-light);
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-dropdown li:hover {
+    color: var(--primary-color);
+}
+
+/* ===================================================
+   COMMON SUBMENU
+=================================================== */
+
+.has-submenu {
+    position: relative;
+}
+
+/* SUBMENU */
+
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    min-width: 215px;
+    background: var(--white);
+    padding: 24px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* SHOW SUBMENU */
+
+.has-submenu:hover>.submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===================================================
+   MEGA MENU
+=================================================== */
+
+.mega-menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* MEGA COLUMN */
+
+.mega-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* TITLE */
+
+.mega-column h4 {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* LIST */
+
+.mega-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ITEM */
+
+.mega-column li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ===================================================
+   SIMPLE DROPDOWN
+=================================================== */
+
+.simple-dropdown {
+    min-width: 220px;
+}
+
+.simple-dropdown ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ===================================================
+   MENU TITLE
+=================================================== */
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+/* ===================================================
+   MENU BADGE
+=================================================== */
+
+.menu-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 2px;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+/* HOT */
+
+.menu-badge.HOT {
+    background: var(--orange);
+}
+
+/* NEW */
+
+.menu-badge.NEW {
+    background: var(--primary-color);
+}
+
+.navigation.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ==========================================
+   BROWSE CATEGORIES DROPDOWN (Like Wolmart)
+========================================== */
+
+.browse-category {
+    position: relative;
+}
+
+/* Main dropdown container */
+.browse-category .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    display: flex;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.default-open-category .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+/* ==========================================
+   STICKY => OPEN ON HOVER
+========================================== */
+
+.sticky-nav .browse-category:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================================
+   LEFT CATEGORY SIDEBAR
+========================================== */
+
+/* Sidebar */
+.browse-category-sidebar {
+    position: relative;
+    width: 280px;
+    border-right: 1px solid var(--border-color);
+    padding: 12px;
+    background: var(--white);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+.browse-category-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   CHEVRON ICON MOVE TO RIGHT ON HOVER
+   Add this code at the end of your CSS file
+========================================== */
+
+/* Smooth transition for the right chevron icon */
+.browse-category-sidebar .browsecategory-item svg:last-child {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Move chevron slightly to the right on hover */
+.browse-category-sidebar .browsecategory-item:hover svg:last-child,
+.browse-category-sidebar .browsecategory-item.active svg:last-child {
+    transform: translateX(4px);
+    color: var(--primary-color);
+}
+
+.browse-category-sidebar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.browse-category-sidebar li:hover {
+    color: var(--primary-color);
+}
+
+.browse-category-sidebar li svg:first-child {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.browse-category-sidebar li svg{
+    font-size: 12px;
+    color: var(--text-dark);
+}
+
+/* View all categories */
+.view-all-categories {
+    margin-top: 14px;
+    padding: 14px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   RIGHT MEGA MENU CONTENT
+========================================== */
+
+/* Right content */
+.browse-category-content {
+    position: absolute;
+    left: 280px;
+    /* Exactly beside sidebar */
+    display: flex;
+    height: fit-content;
+    background: var(--white);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: fit-content;
+    z-index: 10;
+}
+
+/* Menu columns */
+.browse-category-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 24px;
+}
+
+.browse-category-column {
+    min-width: 220px;
+}
+
+.browse-category-column h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+.browse-category-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.browse-category-sidebar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 14px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.browse-category-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.browse-category-column li:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   RIGHT PROMO BANNER
+========================================== */
+
+.browse-category-banner {
+   width: 300px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.browse-category-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   FURNITURE SPECIAL LAYOUT
+   (4 columns on top + 2 banners at bottom)
+========================================== */
+
+/* Make Furniture content vertical instead of side-by-side */
+.browse-category-content:has(.furniture-layout) {
+    display: block;
+    background: var(--white);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: fit-content;
+    /* 1210px total - 280px sidebar */
+}
+
+/* 4 submenu columns */
+.furniture-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    padding: 24px;
+}
+
+/* Bottom banners wrapper */
+.furniture-bottom-banners {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 0 24px 24px;
+}
+
+/* Each banner card */
+.furniture-bottom-banners img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+

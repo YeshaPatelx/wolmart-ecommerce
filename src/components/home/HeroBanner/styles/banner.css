@@ -1,0 +1,361 @@
+.hero-banner {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* =========================
+   MAIN SLIDE
+========================= */
+.banner-slide {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+.banner-wrapper {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+/* =========================
+   IMAGE SIDE
+========================= */
+.banner-product-image {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.banner-product-image img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   CONTENT SIDE
+========================= */
+.banner-content {
+  width: 40%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 16px;
+}
+
+.banner-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.banner-title {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.banner-highlight {
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+/* =========================
+   ROLLER BANNER
+========================= */
+.roller-banner .banner-title {
+  font-size: 58px;
+  font-weight: 300;
+}
+
+.roller-banner .banner-highlight {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+/* =========================
+   SHOES BANNER
+========================= */
+.shoes-banner .banner-title {
+  font-size: 72px;
+}
+
+.shoes-banner .banner-highlight {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+/* =========================
+   BAG BANNER
+========================= */
+.bag-banner .banner-highlight {
+  color: var(--text-light);
+  font-size: 34px;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+.swiper-pagination {
+  bottom: 24px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  opacity: 1;
+  border: 2px solid var(--border-color);
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 20px;
+  background: var(--primary-color);
+}
+
+/* =========================
+   1399px
+========================= */
+@media (max-width: 1399px) {
+
+  .banner-product-image {
+    left: 36%;
+  }
+
+  .banner-product-image img {
+    max-width: 520px;
+  }
+
+  .banner-title {
+    font-size: 56px;
+  }
+
+  .roller-banner .banner-highlight {
+    font-size: 68px;
+  }
+}
+
+/* =========================
+   1199px
+========================= */
+@media (max-width: 1199px) {
+
+  .banner-slide,
+  .banner-wrapper {
+    height: 450px;
+  }
+
+  .banner-product-image {
+    left: 34%;
+  }
+
+  .banner-product-image img {
+    max-width: 450px;
+  }
+
+  .banner-title {
+    font-size: 48px;
+  }
+
+  .banner-highlight {
+    font-size: 34px;
+  }
+
+  .roller-banner .banner-highlight {
+    font-size: 56px;
+  }
+
+  .shoes-banner .banner-title {
+    font-size: 58px;
+  }
+}
+
+/* =========================
+   991px
+========================= */
+@media (max-width: 991px) {
+
+  .banner-slide,
+  .banner-wrapper {
+    height: 420px;
+    min-height: 420px;
+  }
+
+  .banner-product-image {
+    left: 28%;
+  }
+
+  .banner-product-image img {
+     max-width: 320px;
+  }
+
+  .banner-content {
+    width: 45%;
+  }
+
+  .banner-title {
+    font-size: 40px;
+  }
+
+  .banner-highlight {
+    font-size: 30px;
+  }
+
+  .roller-banner .banner-title {
+    font-size: 45px;
+  }
+
+  .roller-banner .banner-highlight {
+    font-size: 48px;
+  }
+
+  .shoes-banner .banner-title {
+    font-size: 45px;
+  }
+}
+
+/* =========================
+   767px
+========================= */
+@media (max-width: 767px) {
+
+  .banner-slide,
+  .banner-wrapper {
+      height: 350px;
+    min-height: 350px;
+  }
+
+  .banner-wrapper {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  .banner-product-image {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .banner-product-image img {
+     max-width: 220px;
+  }
+  .banner-content {
+    width: 55%;
+    gap: 10px;
+  }
+
+  .banner-subtitle {
+    font-size: 14px;
+  }
+
+  .banner-title {
+   font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .banner-highlight {
+   font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .roller-banner .banner-title {
+    font-size: 36px;
+  }
+
+  .roller-banner .banner-highlight {
+    font-size: 38px;
+  }
+
+  .shoes-banner .banner-title {
+    font-size: 38px;
+  }
+
+  .shoes-banner .banner-highlight {
+    font-size: 26px;
+  }
+
+  .bag-banner .banner-highlight {
+    font-size: 22px;
+  }
+
+  .swiper-pagination {
+    bottom: 15px !important;
+  }
+}
+
+/* =========================
+   575px
+========================= */
+@media (max-width: 575px) {
+
+  .banner-slide,
+  .banner-wrapper {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .banner-product-image {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .banner-product-image img {
+   max-width: 160px;
+  }
+
+  .banner-content {
+    width: 55%;
+  }
+
+  .banner-subtitle {
+     font-size: 12px;
+  }
+
+  .banner-title {
+    font-size: 22px;
+  }
+
+  .banner-highlight {
+    font-size: 16px;
+  }
+
+  .roller-banner .banner-title {
+    font-size: 28px;
+  }
+
+  .roller-banner .banner-highlight {
+    font-size: 30px;
+  }
+
+  .shoes-banner .banner-title {
+    font-size: 28px;
+  }
+
+  .shoes-banner .banner-highlight {
+    font-size: 20px;
+  }
+
+  .bag-banner .banner-highlight {
+    font-size: 16px;
+  }
+
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+}

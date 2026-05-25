@@ -1,0 +1,121 @@
+.offer-banner-section {
+  padding-bottom: 50px;
+}
+
+.offer-banner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.offer-banner-card {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+
+.offer-banner-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.offer-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 300px;
+}
+
+/* ---------- TEXT COLORS ---------- */
+
+/* Banner 1 = White */
+.banner-1 .offer-subtitle,
+.banner-1 .offer-title,
+.banner-1 .offer-description,
+.banner-1 .offer-btn .custom-btn {
+  color: var(--white);
+}
+
+/* Banner 2 = Black */
+.banner-2 .offer-subtitle,
+.banner-2 .offer-title,
+.banner-2 .offer-description,
+.banner-2 .offer-btn .custom-btn {
+  color: var(--black);
+}
+
+/* ---------- COMMON ---------- */
+
+.offer-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.offer-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom:20px;
+}
+
+.offer-description {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.offer-btn .custom-btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Underline Animation */
+.offer-btn .custom-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* Banner 1 underline */
+.banner-1 .offer-btn .custom-btn::after {
+  background: var(--white);
+}
+
+/* Banner 2 underline */
+.banner-2 .offer-btn .custom-btn::after {
+  background: var(--black);
+}
+
+.offer-btn .custom-btn:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .offer-banner-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-banner-card {
+    height: 220px;
+    padding: 25px;
+  }
+
+  .offer-title {
+    font-size: 28px;
+  }
+}

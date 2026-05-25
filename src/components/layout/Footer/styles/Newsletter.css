@@ -1,0 +1,171 @@
+.newsletter-section {
+    background-color: var(--primary-color);
+    padding: 28px 0;
+    color: var(--white);
+}
+
+.newsletter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.newsletter-content-left {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    width: 40%;
+}
+
+.newsletter-text {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+
+
+}
+
+.newsletter-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.newsletter-description {
+    margin: 0;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+.newsletter-icon{
+    font-size: 45px;
+}
+.newsletter-form-wrapper{
+    width: 60%;
+}
+.newsletter-form{
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+}
+
+.newsletter-input{
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-muted);
+    box-sizing: border-box;
+    padding: 8px 20px;
+    border:1px solid var(--border-color);
+    min-height: 45px;
+}
+
+.newsletter-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.newsletter-button{
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+    padding:14px 24px;
+    border: 2px solid var(--text-dark);
+}
+
+.newsletter-button:hover{
+    background-color: var(--black);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .newsletter-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .newsletter-content-left,
+    .newsletter-form-wrapper {
+        width: 100%;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .newsletter-section {
+        padding: 24px 0;
+    }
+
+    .newsletter-content-left {
+        align-items: flex-start;
+    }
+
+    .newsletter-icon {
+        font-size: 36px;
+    }
+
+    .newsletter-title {
+        font-size: 14px;
+    }
+
+    .newsletter-description {
+        font-size: 11px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .newsletter-input {
+        width: 100%;
+    }
+
+    .newsletter-button {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .newsletter-wrapper {
+        gap: 20px;
+    }
+
+    .newsletter-content-left {
+        gap: 12px;
+    }
+
+    .newsletter-icon {
+        font-size: 30px;
+    }
+
+    .newsletter-title {
+        line-height: 1.4;
+    }
+
+    .newsletter-description {
+        line-height: 1.5;
+    }
+}

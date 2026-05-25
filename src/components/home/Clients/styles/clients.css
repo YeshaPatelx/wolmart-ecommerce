@@ -1,0 +1,102 @@
+/* CLIENTS */
+
+.clients-section {
+  padding-bottom: 50px;
+}
+
+
+/* SWIPER */
+
+.clients-section .swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.clients-section .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* CARD */
+
+.client-card {
+  height: 120px;
+
+  border: 1px solid var(--border-color);
+  background: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  transition: 0.3s;
+}
+
+.client-logo {
+  width: 100%;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.client-card:hover .client-logo {
+  transform: scale(1.05);
+}
+
+/* LARGE SCREEN */
+
+@media (max-width: 1200px) {
+
+  .client-card {
+    height: 110px;
+    padding: 18px;
+  }
+
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+
+
+  .client-card {
+    height: 100px;
+    padding: 16px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .client-card {
+    height: 90px;
+    padding: 14px;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 576px) {
+
+
+
+  .clients-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+ 
+  .client-card {
+    height: 80px;
+    padding: 12px;
+  }
+
+  .client-logo {
+    max-width: 70px;
+  }
+}
