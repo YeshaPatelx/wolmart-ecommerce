@@ -297,6 +297,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .ps-stars {
@@ -405,10 +407,11 @@
         padding-bottom: 40px;
     }
 
-    .ps-grid {
+      .ps-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-
+   
     .ps-banner .left {
         height: 300px;
     }

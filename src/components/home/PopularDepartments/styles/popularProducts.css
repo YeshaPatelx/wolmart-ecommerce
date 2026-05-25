@@ -148,6 +148,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-rating {
@@ -195,7 +197,7 @@
 
 @media (max-width: 576px) {
 
-  .products-grid {
+   .products-grid {
     grid-template-columns: 1fr;
   }
 
