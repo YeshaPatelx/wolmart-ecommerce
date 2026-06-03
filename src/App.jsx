@@ -1,16 +1,17 @@
 import React from 'react'
-import Home from './pages/Home'
+
 import Header from './components/layout/Header/Header'
 import Footer from './components/layout/Footer/Footer'
 import ScrollTopButton from './components/common/ScrollTopButton/ScrollTopButton'
+import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
   return (
     <>
     <Header/>
       <main>
-        <Home />
-
+       
+        <AppRoutes />
       </main>
       <Footer/>
 

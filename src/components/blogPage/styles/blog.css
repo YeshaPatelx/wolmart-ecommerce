@@ -1,0 +1,47 @@
+.blog-page {
+  padding: 50px 0;
+}
+
+.blog-layout {
+  display: flex;
+  gap: 30px;
+}
+
+.blog-content {
+  width: 75%;
+}
+
+.sidebar-area {
+  width: 25%;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.blog-card {
+  border: 1px solid #eee;
+}
+
+.blog-card img {
+  width: 100%;
+  display: block;
+}
+
+.blog-hero {
+  height: 190px;
+  background: #f5f5f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}

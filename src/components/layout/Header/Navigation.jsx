@@ -8,6 +8,7 @@ import BlogMenu from "./menus/BlogMenu";
 import PagesMenu from "./menus/PagesMenu";
 import ElementsMenu from "./menus/ElementsMenu";
 import BrowsecategoryMenu from "./menus/BrowsecategoryMenu";
+import { useLocation } from "react-router-dom";
 
 import "./styles/menu.css";
 
@@ -35,6 +36,10 @@ const Navigation = () => {
 
   }, []);
 
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
+
   return (
 
     <nav className={`navigation ${isSticky ? "sticky-nav" : ""}`}>
@@ -46,7 +51,7 @@ const Navigation = () => {
           {/* Left Category Button */}
 
           <div
-            className={`dropdown-wrapper browse-category ${!isSticky ? "default-open-category" : ""
+            className={`dropdown-wrapper browse-category ${isHomePage && !isSticky ? "default-open-category" : ""
               }`}
           >
 

@@ -219,6 +219,12 @@
     opacity: 1;
     visibility: visible;
 }
+
+.browse-category:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* ==========================================
    STICKY => OPEN ON HOVER
 ========================================== */
