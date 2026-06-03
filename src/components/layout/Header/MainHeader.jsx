@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../../assets/images/logo/logo.png";
-
+import { Link } from "react-router-dom";
 import {
   FiHeart,
   FiRepeat,
@@ -58,9 +58,9 @@ const MainHeader = () => {
               <FaBars />
             </div>
 
-            <a href="/">
+            <Link to="/">
               <img src={logo} alt="Wolmart Logo" />
-            </a>
+            </Link>
 
           </div>
 

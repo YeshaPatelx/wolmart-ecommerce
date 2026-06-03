@@ -9,8 +9,10 @@ import OfferBanner from '../components/home/OfferBanner/OfferBanner';
 import ProductShowcase from '../components/home/ProductShowcase/ProductShowcase';
 import PromoBanner from '../components/home/PromoBanner/PromoBanner';
 import Clients from '../components/home/Clients/Clients';
-import Blog from '../components/home/Blog/Blog';
+
 import RecentViews from '../components/home/RecentViews/RecentViews';
+import BlogSection from '../components/home/BlogSection/BlogSection';
+
 
 
 const Home = () => {
@@ -26,7 +28,7 @@ const Home = () => {
       <ProductShowcase/>
       <PromoBanner/>
       <Clients/>
-      <Blog/>
+      <BlogSection/>
       <RecentViews/>
     </>
   )

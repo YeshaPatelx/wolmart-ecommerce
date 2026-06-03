@@ -1,6 +1,6 @@
 /* BLOG */
 
-.blog-section {
+.home-blog-section {
     padding-bottom: 50px;
 }
 
@@ -8,7 +8,7 @@
 
 /* GRID */
 
-.blog-grid {
+.home-blog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -16,7 +16,7 @@
 
 /* CARD */
 
-.blog-card {
+.home-blog-card {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -24,25 +24,25 @@
 
 /* IMAGE */
 
-.blog-img-wrap {
+.home-blog-img-wrap {
     overflow: hidden;
     border-radius: 6px;
 }
 
-.blog-img {
+.home-blog-img{
     width: 100%;
     display: block;
 
     transition: 0.4s ease;
 }
 
-.blog-card:hover .blog-img {
+.home-blog-card:hover .home-blog-img{
     transform: scale(1.08);
 }
 
 /* CONTENT */
 
-.blog-content {
+.home-blog-content {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -51,7 +51,7 @@
 
 /* META */
 
-.blog-meta {
+.home-blog-meta {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -59,22 +59,22 @@
     font-size: 14px;
 }
 
-.blog-by {
+.home-blog-by {
     color: var(--text-light);
 }
 
-.blog-author {
+.home-blog-author {
     font-weight: 700;
     color: var(--text-dark);
 }
 
-.blog-date {
+.home-blog-date {
     color: var(--text-light);
 }
 
 /* TITLE */
 
-.blog-title {
+.home-blog-title {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
@@ -85,13 +85,12 @@
     cursor: pointer;
 }
 
-.blog-title:hover {
+.home-blog-title:hover {
     color: var(--primary-color);
 }
-
 /* BUTTON */
 
-.blog-btn {
+.home-blog-btn {
     width: fit-content;
 
     border: none;
@@ -108,41 +107,43 @@
     transition: 0.3s;
 }
 
-.blog-btn .custom-btn {
+.home-blog-btn .custom-btn {
     padding: 0;
     border: none;
     background: transparent;
+
     text-transform: capitalize;
     font-size: 14px;
     font-weight: 500;
     color: var(--text-light);
+
+    transition: 0.3s;
 }
 
-.blog-btn-icon {
+.home-blog-btn-icon {
     font-size: 14px;
     transition: 0.3s;
 }
 
-.blog-btn:hover .blog-btn-icon {
+.home-blog-btn:hover .home-blog-btn-icon {
     transform: translateX(4px);
 }
 
-.blog-btn:hover .custom-btn {
+.home-blog-btn:hover .custom-btn {
     color: var(--primary-color);
 }
-
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
 
-    .blog-grid {
+    .home-blog-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 992px) {
 
-    .blog-grid {
+    .home-blog-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -150,7 +151,7 @@
 @media (max-width: 576px) {
 
  
-    .blog-grid {
+    .home-blog-grid {
         grid-template-columns: 1fr;
     }
 }

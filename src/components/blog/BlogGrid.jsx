@@ -1,12 +1,15 @@
 import React from "react";
 import BlogCard from "./BlogCard";
-import blogPosts from "../../../data/Blog/blogPosts";
+import { blogData } from "../../data/blogData";
 
 const BlogGrid = () => {
   return (
     <div className="blog-grid">
-      {blogPosts.map((post) => (
-        <BlogCard key={post.id} post={post} />
+      {blogData.map((post) => (
+        <BlogCard
+          key={post.id}
+          post={post}
+        />
       ))}
     </div>
   );

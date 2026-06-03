@@ -1,0 +1,21 @@
+.page-banner {
+  background: var(--banner-bg);
+  
+}
+
+.page-banner-content {
+  text-align: center;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-banner-content h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: capitalize;
+  margin-bottom: 0;
+}

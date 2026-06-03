@@ -1,32 +1,23 @@
-import React from "react";
-
-
-import '../components/blogPage/styles/blog.css';
-import BlogGrid from "../components/blogPage/blog/BlogGrid";
-import BlogSidebar from "../components/blogPage/sidebar/BlogSidebar";
-import BlogHero from "../components/blogPage/blog/BlogHero";
-
+import BlogGrid from "../components/blog/BlogGrid";
+import BlogSidebar from "../components/blog/BlogSidebar";
+import BlogPagination from "../components/blog/BlogPagination";
+import PageBanner from "../components/common/PageBanner/PageBanner";
+import "../components/blog/styles/blog.css";
 const Blog = () => {
   return (
     <>
-    <BlogHero/>
-    <section className="blog-page">
+      <PageBanner title="Classic" />
+
       <div className="container">
-
-        <h1>Blog</h1>
-
         <div className="blog-layout">
-          <div className="blog-content">
-            <BlogGrid/>
+          <div className="blog-main">
+            <BlogGrid />
+            <BlogPagination />
           </div>
 
-          <div className="sidebar-area">
-            <BlogSidebar/>
-          </div>
+          <BlogSidebar />
         </div>
-
       </div>
-    </section>
     </>
   );
 };

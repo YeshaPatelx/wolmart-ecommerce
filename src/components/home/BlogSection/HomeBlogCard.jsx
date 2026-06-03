@@ -1,57 +1,55 @@
-// BlogCard.jsx
+// HomeBlogCard.jsx
 
 import React from "react";
 
-import { FaArrowRightLong } from "react-icons/fa6";
+
 
 import Button from "../../common/Button/Button";
 
-const BlogCard = ({ item }) => {
+const HomeBlogCard = ({ item }) => {
   return (
-    <div className="blog-card">
+    <div className="home-blog-card">
 
       {/* IMAGE */}
-      <div className="blog-img-wrap">
+      <div className="home-blog-img-wrap">
 
         <img
           src={item.image}
           alt={item.title}
-          className="blog-img"
+          className="home-blog-img"
         />
 
       </div>
 
       {/* CONTENT */}
-      <div className="blog-content">
+      <div className="home-blog-content">
 
         {/* META */}
-        <div className="blog-meta">
+        <div className="home-blog-meta">
 
-          <span className="blog-by">
+          <span className="home-blog-byy">
             by
           </span>
 
-          <span className="blog-author">
+          <span className="home-blog-author">
             {item.author}
           </span>
 
-          <span className="blog-date">
+          <span className="home-blog-date">
             - {item.date}
           </span>
 
         </div>
 
         {/* TITLE */}
-        <h3 className="blog-title">
+        <h3 className="home-blog-title ">
           {item.title}
         </h3>
 
         {/* BUTTON */}
-        <button className="blog-btn">
-
+        <div className="home-blog-btn">
           <Button text="Read More" />
-
-        </button>
+        </div>
 
       </div>
 
@@ -59,4 +57,4 @@ const BlogCard = ({ item }) => {
   );
 };
 
-export default BlogCard;
+export default HomeBlogCard;
