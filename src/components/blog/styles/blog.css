@@ -5,7 +5,7 @@
 .blog-layout {
     display: flex;
     gap: 30px;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .blog-main {
@@ -14,8 +14,14 @@
 
 .blog-sidebar {
     width: 25%;
-}
-
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 80px; /* distance from top when sticky */
+    align-self: flex-start;
+}   
 /* =========================
    BLOG GRID
 ========================= */
@@ -112,11 +118,7 @@
    SIDEBAR
 ========================= */
 
-.blog-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+
 
 .sidebar-widget {
     display: flex;
@@ -204,31 +206,52 @@
     color: var(--primary-color);
 }
 
-/* =========================
-   PAGINATION
-========================= */
-
 .blog-pagination {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 50px;
+    align-items: center;
+    gap: 0px;
+    margin-top: 30px;
+    
 }
 
-.blog-pagination button {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--border-color);
-    background: var(--white);
+.pagination-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: var(--text-muted);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.blog-pagination button.active {
-    background: var(--primary-color);
-    color:var(--white);
-    border-color: var(--primary-color);
+.pagination-nav:hover {
+    color: var(--primary-color);
 }
 
+.pagination-number {
+    width: 30px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-number.active {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--primary-color);
+    
+}
+
+.pagination-number:hover {
+    color: var(--primary-color);
+}
 /* =========================
    SINGLE BLOG CONTENT
 ========================= */
@@ -248,22 +271,40 @@
 }
 
 .blog-content p {
-    color: #666;
+    color: var(--text-light);
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-/* Popular Posts */
+.slider-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.popular-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.custom-navigation-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.custom-navigation-wrap button {
+ width: fit-content;
+ background: transparent;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+.popular-posts-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .popular-post {
     display: flex;
     gap: 12px;
+    align-items: center;
 }
 
 .popular-post img {
@@ -272,16 +313,15 @@
     object-fit: cover;
 }
 
-.popular-post h4 {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 6px;
-    color: var(--text-dark);
+.popular-post-content h4 {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 6px;
 }
 
-.popular-post span {
-    font-size: 12px;
-    color: var(--text-light);
+.popular-post-content span {
+  font-size: 12px;
+  color: var(--text-light);
 }
 
 /* Custom Block */
@@ -290,6 +330,7 @@
     font-size: 14px;
     line-height: 1.8;
     color: var(--text-light);
+    margin-bottom: 0;
 }
 
 .custom-block a {
@@ -299,22 +340,41 @@
 
 /* Calendar */
 
-.blog-calendar {
-    width: 100%;
-    border-collapse: collapse;
+.calendar-month {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
     text-align: center;
 }
 
-.blog-calendar th,
-.blog-calendar td {
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    font-size: 13px;
+.day-name {
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
-.active-day {
-    background: var(--primary-color);
-    color: white;
+.calendar-grid div {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.other-month {
+    color: var(--text-muted) !important;
+}
+
+.today {
+    color: var(--primary-color) !important;
+    font-weight: 700;
 }
 
 /* =========================
@@ -324,6 +384,7 @@
 @media (max-width: 991px) {
     .blog-layout {
         flex-direction: column;
+        gap: 50px;
     }
 
     .blog-main,
@@ -331,5 +392,30 @@
         width: 100%;
     }
 
+    .blog-sidebar {
+        position: static;
+    }
+}
 
+@media (max-width: 576px) {
+    .calendar-grid {
+        gap: 8px;
+    }
+
+    .calendar-grid div {
+        font-size: 12px;
+    }
+
+    .calendar-month {
+        font-size: 13px;
+    }
+
+     .popular-post img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .popular-post-content h4 {
+        font-size: 13px;
+    }
 }

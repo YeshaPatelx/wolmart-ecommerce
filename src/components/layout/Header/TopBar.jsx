@@ -5,7 +5,7 @@ import { FaUser, FaChevronDown } from "react-icons/fa";
 import engFlag from "../../../assets/images/flags/eng.png";
 import fraFlag from "../../../assets/images/flags/fra.png";
 
-const TopBar = () => {
+const TopBar = ({ openModal }) => {
   return (
     <div className="top-bar">
       <div className="container">
@@ -67,22 +67,30 @@ const TopBar = () => {
                 Contact Us
               </Link>
 
-              <Link to="/login" className="topbar-link">
+              <Link to="/myaccount" className="topbar-link">
                 My Account
               </Link>
 
               <div className="sign-login-wrapper">
-                <Link to="/login" className="icon-wrap topbar-link">
+                <button
+                  className="icon-wrap topbar-link"
+                  onClick={openModal}
+                >
                   <FaUser />
                   Sign In
-                </Link>
+                </button>
 
                 <span>/</span>
 
-                <Link to="/register" className="topbar-link">
+                <button
+                  className="topbar-link"
+                  onClick={openModal}
+                >
                   Register
-                </Link>
+                </button>
               </div>
+
+
             </div>
           </div>
         </div>

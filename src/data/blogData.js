@@ -47,4 +47,23 @@ export const blogData = [
     excerpt:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
+  {
+  id: 5,
+  image: blog1,
+  category: "Fashion",
+  author: "John Doe",
+  date: "04.05.2021",
+  title: "Top Fashion Trends",
+  excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+},
+
+{
+  id: 6,
+  image: blog2,
+  category: "Lifestyle",
+  author: "John Doe",
+  date: "05.05.2021",
+  title: "Modern Furniture Ideas",
+  excerpt: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+},
 ];

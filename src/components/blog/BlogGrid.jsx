@@ -1,15 +1,16 @@
-import React from "react";
-import BlogCard from "./BlogCard";
 import { blogData } from "../../data/blogData";
+import BlogCard from "./BlogCard";
 
-const BlogGrid = () => {
+const POSTS_PER_PAGE = 3;
+
+const BlogGrid = ({ currentPage }) => {
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const posts = blogData.slice(start, start + POSTS_PER_PAGE);
+
   return (
     <div className="blog-grid">
-      {blogData.map((post) => (
-        <BlogCard
-          key={post.id}
-          post={post}
-        />
+      {posts.map((post) => (
+        <BlogCard key={post.id} post={post} />
       ))}
     </div>
   );

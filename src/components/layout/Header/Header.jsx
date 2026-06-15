@@ -1,18 +1,30 @@
-import React from 'react'
-import TopBar from './TopBar'
-import MainHeader from './MainHeader'
-import Navigation from './Navigation'
-import './styles/Header.css';
-import './styles/menu.css'
+import React, { useState } from "react";
+import TopBar from "./TopBar";
+import MainHeader from "./MainHeader";
+import Navigation from "./Navigation";
+
+
+import "./styles/Header.css";
+import "./styles/menu.css";
+import AuthModal from "../../auth/AuthModal";
 
 const Header = () => {
-  return (
-    <header>
-        <TopBar/>
-        <MainHeader/>
-        <Navigation/>
-    </header>
-  )
-}
+  const [showModal, setShowModal] = useState(false);
 
-export default Header
+  return (
+    <>
+      <header>
+        <TopBar openModal={() => setShowModal(true)} />
+        <MainHeader />
+        <Navigation />
+      </header>
+      
+      <AuthModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
+    </>
+  );
+};
+
+export default Header;

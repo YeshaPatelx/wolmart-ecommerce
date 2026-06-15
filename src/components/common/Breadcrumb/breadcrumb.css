@@ -1,0 +1,42 @@
+/* =========================
+   BREADCRUMB
+========================= */
+
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px !important;
+    margin: 0;
+    padding: 24px 0 !important;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0px !important;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+}
+.breadcrumb-item::before{
+    display: none;
+}
+.breadcrumb-item+.breadcrumb-item{
+    padding-left: 0 !important;
+}
+.breadcrumb svg {
+    font-size: 12px;
+    color: var(--text-muted);
+}
